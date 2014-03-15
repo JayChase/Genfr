@@ -20,6 +20,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{FC9594
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A0A792DF-3F5C-4771-A2D0-EB6D0BF557C3}"
 	ProjectSection(SolutionItems) = preProject
+		License.txt = License.txt
 		readme.md = readme.md
 	EndProjectSection
 EndProject
