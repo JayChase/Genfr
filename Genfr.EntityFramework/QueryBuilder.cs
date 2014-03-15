@@ -611,7 +611,7 @@ namespace Genfr.EntityFramework
         #endregion
 
         #region Include
-
+      
         public IQueryBuilder<T> Include<TProperty>(Expression<Func<T, TProperty>> path)
         {
             if (typeof(T).IsValueType)

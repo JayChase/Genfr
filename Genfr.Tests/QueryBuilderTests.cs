@@ -31,7 +31,7 @@ namespace FluentRepository.Tests
             using (var context = new SampleContext(connectionString))
             {
                 System.Data.Entity.Database.SetInitializer<SampleContext>(new SampleInitializer());
-                context.Database.Initialize(true);
+                context.Database.Initialize(true);  
             }
         }
 
@@ -394,7 +394,7 @@ namespace FluentRepository.Tests
         {
             using (var store = new Store(new SampleContext(connectionString)))
             {
-                var result = await store.Query<Book>().FirstOrDefaultAsync(b => b.Title == "The Wasp Factory");
+                var result = await store.Query<Book>().Include(b => b.Publisher).FirstOrDefaultAsync();
 
                 Assert.IsNotNull(result);
             }
@@ -778,6 +778,18 @@ namespace FluentRepository.Tests
             {
                 long expected = 6;
                 long result = await store.Query<Book>().SumAsync(b => b.EditionLong);
+
+                Assert.AreEqual(expected, result);
+            }
+        }
+
+        [TestMethod]
+        public async Task Page()
+        {
+            using (var store = new Store(new SampleContext(connectionString)))
+            {
+                var expected = 1;
+                var result = await store.Query<Book>().OrderBy(b => b.Title).Page(0,1).CountAsync();
 
                 Assert.AreEqual(expected, result);
             }
