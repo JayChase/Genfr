@@ -11,7 +11,7 @@ namespace Genfr.EntityFramework
     public class Store : IStore
     {
         private bool disposed = false;
-        public DbContext context;
+        private DbContext context;
         private IExceptionHandler ExceptionHandler;        
 
         public Store(DbContext context): this(context, new ExceptionHandler())
