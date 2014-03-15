@@ -2,19 +2,19 @@
 <package >
   <metadata>
 	<id>Genfr.EntityFramework</id>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<authors>JayChase</authors>
 	<owners>JayChase</owners>
 	<licenseUrl>https://github.com/Useful-Software-Solutions-Ltd/Genfr/blob/master/License.txt</licenseUrl>
 	<projectUrl>https://github.com/Useful-Software-Solutions-Ltd/Genfr</projectUrl>
 	<requireLicenseAcceptance>false</requireLicenseAcceptance>
 	<description>Entity Framework repository with fluent query API.</description>
-	<releaseNotes>Initial release.</releaseNotes>
-	<copyright>Copyright 2014</copyright>
+	<releaseNotes>EntityFramework dependency version moved to 6.0.2</releaseNotes>
+	<copyright>Copyright 2014 Useful Software Solutions Ltd</copyright>
 	<tags>Repository "Entity Framework" "Fluent API"</tags>
 	<dependencies>
-	  <dependency id="EntityFramework" version="6.0.0" />
-    <dependency id="Genfr" version="1.0.0" />
+	  <dependency id="EntityFramework" version="6.0.2" />
+    <dependency id="Genfr" version="1.0.1" />
 	</dependencies>
   </metadata>
 	<files>
