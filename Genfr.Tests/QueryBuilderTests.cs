@@ -48,8 +48,6 @@ namespace FluentRepository.Tests
             using (var store = new Store(new SampleContext(connectionString)))
             {                
                 var result = await store.Query<Author>().AllAsync(a => a.Id < 9999);
-
-                Assert.IsTrue(result);
             }
         }
 
