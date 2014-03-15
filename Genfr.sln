@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genfr.Data", "Genfr.Data\Genfr.Data.csproj", "{AE3AAE28-EFD0-4E4F-A655-267D210D8C63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genfr.Repository", "Genfr.Repository\Genfr.Repository.csproj", "{2354F1EF-2D56-4864-91FA-080F02C47975}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genfr.Tests", "Genfr.Tests\Genfr.Tests.csproj", "{827BABC4-F9B2-4DEB-A90F-F20C081D26FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genfr.EntityFramework", "Genfr.EntityFramework\Genfr.EntityFramework.csproj", "{500FDF14-5E14-489F-A2E1-BF82E8B39FC4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{FC959448-639C-464E-B4AB-4FD7F448DA55}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A0A792DF-3F5C-4771-A2D0-EB6D0BF557C3}"
+	ProjectSection(SolutionItems) = preProject
+		readme.md = readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AE3AAE28-EFD0-4E4F-A655-267D210D8C63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE3AAE28-EFD0-4E4F-A655-267D210D8C63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE3AAE28-EFD0-4E4F-A655-267D210D8C63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE3AAE28-EFD0-4E4F-A655-267D210D8C63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2354F1EF-2D56-4864-91FA-080F02C47975}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2354F1EF-2D56-4864-91FA-080F02C47975}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2354F1EF-2D56-4864-91FA-080F02C47975}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2354F1EF-2D56-4864-91FA-080F02C47975}.Release|Any CPU.Build.0 = Release|Any CPU
+		{827BABC4-F9B2-4DEB-A90F-F20C081D26FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{827BABC4-F9B2-4DEB-A90F-F20C081D26FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{827BABC4-F9B2-4DEB-A90F-F20C081D26FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{827BABC4-F9B2-4DEB-A90F-F20C081D26FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{500FDF14-5E14-489F-A2E1-BF82E8B39FC4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{500FDF14-5E14-489F-A2E1-BF82E8B39FC4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{500FDF14-5E14-489F-A2E1-BF82E8B39FC4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{500FDF14-5E14-489F-A2E1-BF82E8B39FC4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		EnterpriseLibraryConfigurationToolBinariesPathV6 = packages\EnterpriseLibrary.Common.6.0.1304.0\lib\NET45;packages\EnterpriseLibrary.ExceptionHandling.6.0.1304.0\lib\NET45
+	EndGlobalSection
+EndGlobal
