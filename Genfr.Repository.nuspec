@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <package >
   <metadata>
-	<id>Genfr.EntityFramework</id>
+	<id>Genfr</id>
 	<version>1.0.0</version>
 	<authors>JayChase</authors>
 	<owners>JayChase</owners>
-	<licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+	<licenseUrl>https://github.com/Useful-Software-Solutions-Ltd/Genfr/blob/master/License.txt</licenseUrl>
 	<projectUrl>https://github.com/Useful-Software-Solutions-Ltd/Genfr</projectUrl>
 	<requireLicenseAcceptance>false</requireLicenseAcceptance>
 	<description>Entity Framework repository with fluent query API.</description>
@@ -14,10 +14,9 @@
 	<tags>Repository "Entity Framework" "Fluent API"</tags>
 	<dependencies>
 	  <dependency id="EntityFramework" version="6.0.0" />
-    <dependency id="Genfr" version="1.0.0" />
 	</dependencies>
   </metadata>
 	<files>
-		<file src="Genfr.EntityFramework\bin\Release\Genfr.EntityFramework.dll" target="lib\net451\" />
+		<file src="Genfr.Repository\bin\Release\Genfr.Repository.dll" target="lib\net451\" />
 	</files>
 </package>
