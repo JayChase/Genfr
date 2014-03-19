@@ -1,6 +1,7 @@
 ﻿using Genfr.Repository.ExceptionHandling;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Core;
 using System.Data.Entity.Infrastructure;
 using System.Data.Entity.Validation;
 using System.Linq;
@@ -18,6 +19,10 @@ namespace Genfr.EntityFramework.ExceptionHandling
             if (!exceptionResult.Handled)
             {
                 exceptionResult = HandleDbUpdateException(exception);
+            }
+            else if(!exceptionResult.Handled)
+            {
+                exceptionResult = HandleEntityCommandExecutionException(exception);
             }
             else
             {
@@ -103,6 +108,18 @@ namespace Genfr.EntityFramework.ExceptionHandling
                 }
 
                 return new ExceptionResult(new DataStoreException(newMessage));
+            }
+            else
+            {
+                return new ExceptionResult();
+            }
+        }
+
+        private ExceptionResult HandleEntityCommandExecutionException(Exception exception)
+        {
+            if (exception.GetType() == typeof(EntityCommandExecutionException))
+            {                
+                return new ExceptionResult(new DataStoreException(exception.Message));
             }
             else
             {

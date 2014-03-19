@@ -66,6 +66,8 @@ namespace Genfr.Data.Context
                 TheWaspFactory,
                 TheDifferenceEngine
             });
+
+            context.Database.ExecuteSqlCommand("CREATE PROCEDURE TestProc @returnCount int = null AS SELECT TOP (@returnCount) b.Title, p.Name AS PubName FROM Books b LEFT JOIN Publishers p ON b.PublisherId = p.Id");
         }
     }
 }

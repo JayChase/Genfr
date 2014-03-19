@@ -29,6 +29,11 @@ namespace Genfr.EntityFramework
             return new QueryBuilder<T>(this.context);
         }
 
+        public ISqlQuery<T> SqlQuery<T>(string sql, params object[] parameters)
+        {
+            return new SqlQuery<T>(this.context.Database.SqlQuery<T>(sql,parameters));
+        }
+
         public async Task CreateAsync<T>(T entity) where T : class
         {
             if (entity == null)

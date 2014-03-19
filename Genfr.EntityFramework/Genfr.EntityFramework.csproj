@@ -50,6 +50,7 @@
   <ItemGroup>
     <Compile Include="ExceptionHandling\ExceptionHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlQuery.cs" />
     <Compile Include="QueryBuilder.cs" />
     <Compile Include="QueryBuilderExtensions.cs" />
     <Compile Include="Store.cs" />

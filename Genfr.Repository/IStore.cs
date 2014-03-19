@@ -15,6 +15,17 @@ namespace Genfr.Repository
         /// <typeparam name="T"></typeparam>
         /// <returns></returns>
         IQueryBuilder<T> Query<T>() where T : class;
+        
+        /// <summary>
+        /// /// Creates a raw SQL query that will return elements of the given generic type. The type can be any type that has properties
+        /// that match the names of the columns returned from the query, or can be a simple primitive type. The type does not have to
+        /// be an entity type.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="sql"></param>
+        /// <param name="parameters"></param>
+        /// <returns></returns>
+        ISqlQuery<T> SqlQuery<T>(string sql, params object[] parameters);
 
         /// <summary>
         /// Asynchronously creates a new entity of type T and saves it.

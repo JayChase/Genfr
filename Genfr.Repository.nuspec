@@ -2,14 +2,14 @@
 <package >
   <metadata>
 	<id>Genfr</id>
-	<version>1.0.1</version>
+	<version>1.0.3</version>
 	<authors>JayChase</authors>
 	<owners>JayChase</owners>
 	<licenseUrl>https://github.com/Useful-Software-Solutions-Ltd/Genfr/blob/master/License.txt</licenseUrl>
 	<projectUrl>https://github.com/Useful-Software-Solutions-Ltd/Genfr</projectUrl>
 	<requireLicenseAcceptance>false</requireLicenseAcceptance>
-	<description>Entity Framework repository with fluent query API.</description>
-	<releaseNotes>Removed dependency on EntityFramework.</releaseNotes>
+	<description>A generic repository with a fluent interface to provide a flexible query API. All the benefits of being able to build queries through method chaining without having to return IQueryable from the repository.</description>
+	<releaseNotes>Added support for executing SQL queries (IStore.SqlQuery).</releaseNotes>
 	<copyright>Copyright 2014 Useful Software Solutions Ltd</copyright>
 	<tags>Repository "Entity Framework" "Fluent API"</tags>
 	<dependencies>

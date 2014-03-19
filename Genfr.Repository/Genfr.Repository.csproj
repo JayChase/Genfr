@@ -45,6 +45,7 @@
     <Compile Include="ExceptionHandling\IErrorHandler.cs" />
     <Compile Include="IOrderedQueryBuilder.cs" />
     <Compile Include="IQueryBuilder.cs" />
+    <Compile Include="ISqlQuery.cs" />
     <Compile Include="IStore.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
