@@ -12,6 +12,10 @@ namespace Genfr.EntityFramework.ExceptionHandling
 {
     public class ExceptionHandler : IExceptionHandler
     {
+        public ExceptionHandler()
+        {
+        }
+
         public ExceptionResult HandleException(Exception exception)
         {
             ExceptionResult exceptionResult = HandleDbEntityValidationException(exception);
