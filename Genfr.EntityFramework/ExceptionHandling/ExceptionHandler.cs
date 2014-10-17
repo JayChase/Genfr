@@ -88,11 +88,11 @@ namespace Genfr.EntityFramework.ExceptionHandling
                 var errorMessage = exception.GetBaseException().Message;
                 string newMessage = "";
 
-                if (errorMessage.Contains("UNQ_"))
+                if (errorMessage.Contains("UNQ_") || errorMessage.Contains("Cannot insert duplicate key row in"))
                 {
-                    var errorValue = errorMessage.Substring(errorMessage.IndexOf('(') + 1, errorMessage.IndexOf(')') - errorMessage.IndexOf('(') - 1);
+                    var errorValue = errorMessage.Split(new char[] { '(', ')' }, StringSplitOptions.RemoveEmptyEntries)[1];
 
-                    var errorColumn = errorMessage.Split('\'')[1].Split('_')[2];
+                    var errorColumn = errorMessage.Split(new string[] { "IX_", "'. " }, StringSplitOptions.RemoveEmptyEntries)[1];
 
                     newMessage = string.Format("The {0} {1} already exists.", errorColumn, errorValue); ;
 
@@ -109,6 +109,10 @@ namespace Genfr.EntityFramework.ExceptionHandling
                     }
 
                     newMessage = string.Format("Navigation property {0} is required.", navigationName);
+                }
+                else
+                {
+                    newMessage = errorMessage;
                 }
 
                 return new ExceptionResult(new DataStoreException(newMessage));

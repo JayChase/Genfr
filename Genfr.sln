@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.30110.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Genfr.Data", "Genfr.Data\Genfr.Data.csproj", "{AE3AAE28-EFD0-4E4F-A655-267D210D8C63}"
 EndProject
@@ -20,6 +20,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{FC9594
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A0A792DF-3F5C-4771-A2D0-EB6D0BF557C3}"
 	ProjectSection(SolutionItems) = preProject
+		CreatePackage.bat = CreatePackage.bat
 		Genfr.EntityFramework.nuspec = Genfr.EntityFramework.nuspec
 		Genfr.Repository.nuspec = Genfr.Repository.nuspec
 		License.txt = License.txt

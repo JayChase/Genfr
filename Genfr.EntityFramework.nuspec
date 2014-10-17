@@ -2,7 +2,7 @@
 <package >
   <metadata>
 	<id>Genfr.EntityFramework</id>
-	<version>1.0.5</version>
+	<version>1.0.6</version>
 	<authors>JayChase</authors>
 	<owners>JayChase</owners>
 	<licenseUrl>https://github.com/Useful-Software-Solutions-Ltd/Genfr/blob/master/License.txt</licenseUrl>
@@ -13,8 +13,8 @@
 	<copyright>Copyright 2014 Useful Software Solutions Ltd</copyright>
 	<tags>Repository "Entity Framework" "Fluent API"</tags>
 	<dependencies>
-		<dependency id="EntityFramework" version="" />
-		<dependency id="Genfr" version="" />
+		<dependency id="EntityFramework" version="6.1.1" />
+		<dependency id="Genfr" version="1.0.6" />
 	</dependencies>
   </metadata>
 	<files>

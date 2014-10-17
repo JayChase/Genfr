@@ -14,7 +14,7 @@ namespace FluentRepository.Tests
     [TestClass]
     public class RepositoryTests
     {
-        private const string connectionString = @"Data Source=(LocalDb)\v11.0;AttachDbFilename=|DataDirectory|\FluentRep.mdf;Initial Catalog=FluentRep;Integrated Security=True";
+        private const string connectionString = @"Data Source=(LocalDb)\mssqllocaldb;AttachDbFilename=|DataDirectory|\FluentRep.mdf;Initial Catalog=FluentRep;Integrated Security=True";
         private Store store;
 
         public TestContext TestContext { get; set; }
