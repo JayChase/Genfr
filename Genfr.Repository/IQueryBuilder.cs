@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Genfr.Repository
 {
-    public interface IQueryBuilder<T>
+    public interface IQueryBuilder<T>: IQueryable<T>
     {        
         /// <summary>
         /// Asynchronously determines whether all the elements of a sequence satisfy a condition.

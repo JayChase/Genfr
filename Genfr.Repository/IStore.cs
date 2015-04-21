@@ -28,6 +28,15 @@ namespace Genfr.Repository
         ISqlQuery<T> SqlQuery<T>(string sql, params object[] parameters);
 
         /// <summary>
+        /// Asynchronously execute a sql command
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="sql"></param>
+        /// <param name="parameters"></param>
+        /// <returns></returns>
+        Task<int> ExecuteSqlCommandAsync(string sql, params object[] parameters);
+
+        /// <summary>
         /// Asynchronously creates a new entity of type T and saves it.
         /// </summary>
         /// <typeparam name="T"></typeparam>

@@ -61,6 +61,41 @@ namespace Genfr.EntityFramework
             }
         }
 
+        #region IQueryable<T> implementation
+
+        public IEnumerator<T> GetEnumerator()
+        {
+            return this.Query.GetEnumerator();
+        }
+
+        System.Collections.IEnumerator System.Collections.IEnumerable.GetEnumerator()
+        {
+            return this.Query.GetEnumerator();
+        }
+
+        public Type ElementType
+        {
+            get {
+                return this.Query.ElementType;
+            }
+        }
+
+        public System.Linq.Expressions.Expression Expression
+        {
+            get {
+                return this.Query.Expression;
+            }
+        }
+
+        public IQueryProvider Provider
+        {
+            get {
+                return this.Query.Provider;
+            }
+        }
+
+        #endregion
+
         #region All
 
         public Task<bool> AllAsync(Expression<Func<T, bool>> predicate)

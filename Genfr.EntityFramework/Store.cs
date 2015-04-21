@@ -29,6 +29,11 @@ namespace Genfr.EntityFramework
             return new QueryBuilder<T>(this.context);
         }
 
+        public Task<int> ExecuteSqlCommandAsync(string sql, params object[] parameters)
+        {
+            return this.context.Database.ExecuteSqlCommandAsync(sql, parameters);
+        }
+
         public ISqlQuery<T> SqlQuery<T>(string sql, params object[] parameters)
         {
             return new SqlQuery<T>(this.context.Database.SqlQuery<T>(sql,parameters));
@@ -104,8 +109,8 @@ namespace Genfr.EntityFramework
 
         public void Dispose(bool disposing)
         {
-            if (!this.disposed & !this.disposed)
-            {
+            if (!this.disposed && disposing)
+            {                
                 this.context.Dispose();
             }
 
