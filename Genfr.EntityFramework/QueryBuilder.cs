@@ -1423,6 +1423,35 @@ namespace Genfr.EntityFramework
             }
         }
 
+        public IOrderedQueryBuilder<T> OrderBy<TKey>(string propertyName)
+        {
+            try
+            {
+                this.Query = OrderBy(propertyName, true);
+
+                return this as IOrderedQueryBuilder<T>;
+            }
+            catch (Exception ex)
+            {
+                throw this.exceptionHandler.TranslateException(ex);
+            }
+        }
+
+        internal IQueryable<T> OrderBy(string propertyName, bool ascending)
+        {
+            var parameter = Expression.Parameter(typeof(T), "p");
+            var property = Expression.Property(parameter, propertyName);
+            var expression = Expression.Lambda(property, parameter);
+
+            string method = ascending ? "OrderBy" : "OrderByDescending";
+
+            Type[] types = new Type[] { this.Query.ElementType, expression.Body.Type };
+
+            var methodCallExpression = Expression.Call(typeof(Queryable), method, types, this.Query.Expression, expression);
+
+            return this.Query.Provider.CreateQuery<T>(methodCallExpression) as IOrderedQueryable<T>;
+        }
+
         public IOrderedQueryBuilder<T> OrderBy<TKey>(Expression<Func<T, TKey>> keySelector, IComparer<TKey> comparer)
         {
             try
@@ -1456,6 +1485,20 @@ namespace Genfr.EntityFramework
             try
             {
                 this.Query = this.Query.OrderByDescending(keySelector,comparer);
+
+                return this as IOrderedQueryBuilder<T>;
+            }
+            catch (Exception ex)
+            {
+                throw this.exceptionHandler.TranslateException(ex);
+            }
+        }
+
+        public IOrderedQueryBuilder<T> OrderByDescending<TKey>(string propertyName)
+        {
+            try
+            {
+                this.Query = OrderBy(propertyName, false);
 
                 return this as IOrderedQueryBuilder<T>;
             }

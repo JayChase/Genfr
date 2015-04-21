@@ -764,6 +764,14 @@ namespace Genfr.Repository
         /// <param name="keySelector"></param>
         /// <returns></returns>
         IOrderedQueryBuilder<T> OrderBy<TKey>(Expression<Func<T, TKey>> keySelector);
+
+        /// <summary>
+        /// Sorts the elements of a sequence in ascending order according to a key.
+        /// </summary>
+        /// <typeparam name="TKey"></typeparam>
+        /// <param name="propertyName"></param>
+        /// <returns></returns>
+        IOrderedQueryBuilder<T> OrderBy<TKey>(string propertyName);
         
         /// <summary>
         /// Sorts the elements of a sequence in ascending order by using a specified comparer.
@@ -781,6 +789,14 @@ namespace Genfr.Repository
         /// <param name="keySelector"></param>
         /// <returns></returns>
         IOrderedQueryBuilder<T> OrderByDescending<TKey>(Expression<Func<T, TKey>> keySelector);
+
+        /// <summary>
+        /// Sorts the elements of a sequence in descending order according to a key.
+        /// </summary>
+        /// <typeparam name="TKey"></typeparam>
+        /// <param name="propertyName"></param>
+        /// <returns></returns>
+        IOrderedQueryBuilder<T> OrderByDescending<TKey>(string propertyName);
         
         /// <summary>
         /// Sorts the elements of a sequence in descending order by using a specified comparer.

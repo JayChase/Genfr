@@ -156,6 +156,22 @@ namespace FluentRepository.Tests
         }
 
         [TestMethod]
+        public async Task AuthorsOrderByPropertyNameIsOrderedAZ()
+        {
+            var authors = await store.Query<Author>().OrderBy<Author>("Name").ToListAsync();
+
+            Assert.IsTrue(authors[0].Name == "Banks" & authors[1].Name == "Gibson" & authors[2].Name == "Orwell" & authors[3].Name == "Stirling");
+        }
+
+        [TestMethod]
+        public async Task AuthorsOrderByDescendingPropertyNameIsOrderedZA()
+        {
+            var authors = await store.Query<Author>().OrderByDescending<Author>("Name").ToListAsync();
+
+            Assert.IsTrue(authors[3].Name == "Banks" & authors[2].Name == "Gibson" & authors[1].Name == "Orwell" & authors[0].Name == "Stirling");
+        }
+
+        [TestMethod]
         public async Task AuthorsPagingWorksPage1()
         {
             var authors = await  store.Query<Author>().OrderBy(b => b.Name).Page(0,2).ToListAsync();
